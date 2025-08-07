@@ -1,0 +1,29 @@
+{
+  "name": "revive.ly",
+  "version": "1.0.0",
+  "description": "Project that aims to revive old musical.ly by remaking backend",
+  "main": "Server.js",
+  "bin": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js",
+    "build": "pkg . --out-path dist",
+    "build-win": "pkg . --targets node18-win-x64 --out-path dist",
+    "build-all": "pkg . --targets node18-win-x64,node18-linux-x64,node18-macos-x64 --out-path dist"
+  },
+  "author": "ZRD/Zordon1337",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "assets": [
+      "config.json",
+      "Responses/**/*"
+    ],
+    "outputPath": "dist"
+  }
+}
